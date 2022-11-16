@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'pages/home.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -13,7 +12,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      locale: Locale("fa"),
+      home: Directionality(
+        textDirection: TextDirection.rtl,
+        child: HomePage(),
+      ),
     );
   }
 }
